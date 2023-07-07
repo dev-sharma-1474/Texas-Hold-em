@@ -47,7 +47,7 @@ class Game:
 
     # Function for the community cards (5 cards in the middle)
     def deal_community_cards(self):
-        for i in range(3):
+        for i in range(5):
             card = self.deck.deal()
             self.community_cards.append(card)
 
@@ -109,7 +109,6 @@ class Game:
 
     def play_game(self, user):
         self.deal_cards()
-        self.deal_community_cards()
 
         for user in self.users:
             print(f"{user.name}'s hand:")
@@ -125,5 +124,4 @@ class Game:
             hand_strength = self.calc_hand_strength(user_hand)
             print(f"{user.name}'s hand strength: {hand_strength} ({hand_ranking[hand_strength - 1]})")
 
-    # Deals the cards and displays the game state
 
