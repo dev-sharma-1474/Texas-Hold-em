@@ -2,7 +2,8 @@ from cards import Cards
 
 
 class User:
-    def __init__(self):
+    def __init__(self, name):
+        self.name = name
         self.hand = []
 
     def user_hand(self, cards):
@@ -10,7 +11,7 @@ class User:
 
     def show_user_hand(self):
         for cards in self.hand:
-            print({cards.card_val} + " of " + {cards.suit})
+            print(f"{cards.card_val} of {cards.suit}")
 
 
 
